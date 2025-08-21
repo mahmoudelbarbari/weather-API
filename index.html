@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./images/favIcon.png" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/loader.css" />
+    <script src="./js/index.js"></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div id="loader" class="loader-container">
+      <div class="loader"></div>
+    </div>
+    
+    <div class="weather-app-header">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="logo img" />
+        Weather App
+      </div>
+
+      <div class="search-bar">
+        <input
+          type="text"
+          id="citySearchInput"
+          placeholder="Search for cities"
+          autocomplete="off"
+        />
+        <div id="cityDropdown" class="dropdown-content"></div>
+      </div>
+
+      <div class="unit-toggle">
+        <div>°F</div>
+        <div class="active">°C</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="left">
+        <div class="weather-info">
+          <div class="weather-info-header">
+            <div>
+              <h3 id="forecast-date"></h3>
+              <h1 id="city-name"></h1>
+              <h1 id="temperature"></h1>
+            </div>
+            <img id="header-icon" src="" alt="Weather Icon" />
+          </div>
+
+          <div id="weather-forecast">
+            <p class="forecast-title">TODAY'S FORECAST</p>
+          </div>
+
+          <div class="weather-details">
+            <h2>Weather Details</h2>
+            <div class="details-grid">
+              <div class="detail-item">
+                <div>
+                  <p class="detail-label">Sunrise</p>
+                  <p id="sunrise" class="detail-value"></p>
+                </div>
+                <div class="icon">
+                  <img src="./images/sunrise.svg" alt="sunrise icon" />
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div>
+                  <p class="detail-label">Sunset</p>
+                  <p id="sunset" class="detail-value"></p>
+                </div>
+                <div class="icon">
+                  <img src="./images/sunset.svg" alt="sunset icon" />
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div>
+                  <p class="detail-label">Chance of rain</p>
+                  <p id="rain-chance" class="detail-value"></p>
+                </div>
+                <div class="icon">
+                  <img src="./images/raint.svg" alt="rain chance icon" />
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div>
+                  <p class="detail-label">Wind</p>
+                  <p id="wind" class="detail-value"></p>
+                </div>
+                <div class="icon">
+                  <img src="./images/wind.png" alt="wind icon" />
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div>
+                  <p class="detail-label">UV index</p>
+                  <p id="uv" class="detail-value"></p>
+                </div>
+                <div class="icon">
+                  <img src="./images/sun-fill.svg" alt="uv index icon" />
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div>
+                  <p class="detail-label">Feels like</p>
+                  <p id="feels-like" class="detail-value"></p>
+                </div>
+                <div class="icon">
+                  <img src="./images/temp.svg" alt="temp icon" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="weekly-forecast right">
+        <h2>7-Day Forecast</h2>
+        <div
+          id="weekly-forecast-container"
+          class="weekly-forecast-container"
+        ></div>
+      </div>
+    </div>
+  </body>
+</html>
